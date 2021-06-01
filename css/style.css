@@ -118,7 +118,7 @@
   background-color: #63a63e;
 }
 
-.nav-link,
+.nav-item,
 .link-no-decor {
   text-decoration: none;
   list-style: none;
@@ -132,11 +132,12 @@
   color: var(--basic-greylight);
 }
 
-.nav-link:hover {
+
+.nav-item:hover {
   background-color: var(--basic-ocean-blue);
 }
 
-.nav-link:active {
+.nav-item:active {
   opacity: 0.5;
 }
 
@@ -196,6 +197,9 @@
   color: var(--basic-white);
 }
 
+.nav-item:hover{
+
+}
 .container {
 }
 
@@ -256,7 +260,7 @@
 }
 
 .shop-link:active{
-  
+
 }
 
 .slider-list {
