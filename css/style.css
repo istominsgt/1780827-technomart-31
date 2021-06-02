@@ -278,12 +278,6 @@
   text-transform: uppercase;
 }
 
-.button-obj {
-  background-color: var(--basic-red);
-  width: 192px;
-  height: 38px;
-  text-decoration: none;
-}
 
 .button {
   font-family: "Cuprum", Arial, sans-serif;
@@ -300,13 +294,12 @@
 }
 
 .button:hover,
-.button-radius:hover,
-.button-obj:hover {
+.button-radius:hover {
   background-color: var(--red-hover);
 }
 
-.button:active .button-radius:active,
-.button-obj:active {
+.button:active,
+.button-radius:active{
   background-color: var(--red-active);
 }
 
@@ -520,13 +513,13 @@
 }
 
 .footer-logo {
+  display: inline-block;
   width: 220px;
   height: 68px;
+  background-color:var(--basic-red);
+
 }
 
-.footer-logo-svg {
-  margin: 20px 41px 25px 41px;
-}
 
 .footer-telephone {
   color: var(--basic-white);
