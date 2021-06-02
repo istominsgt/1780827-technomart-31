@@ -551,6 +551,13 @@
   color: var(--basic-gold);
 }
 
+
+.mail,
+.site{
+  text-decoration: none;
+}
+
+
 .mail:hover,
 .site:hover {
   text-decoration: underline;
