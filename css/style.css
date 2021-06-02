@@ -57,6 +57,7 @@
   --delivery: #ffbf47;
   --form-placeholder: #a9a9a9;
   --button-catalog-filter: #e5e5e5;
+  --pagination-border: #c5c5c5;
 }
 
 .page-body {
@@ -286,7 +287,6 @@
   width: 192px;
   height: 38px;
   border: none;
-  border-radius: 2px;
   text-decoration: none;
 }
 
@@ -320,8 +320,10 @@
 .bosch {
   text-transform: uppercase;
 }
-.products-item {
-  font-family: "PT Sans Bold" Arial, sans-serif;
+
+.products-item-header {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
@@ -375,9 +377,6 @@
 .new-item {
   background-image: url("../img/content/catalog-new.png");
   background-repeat: no-repeat;
-}
-
-.popular-manufacturers {
 }
 
 .popular-manufacturers-wrapp {
@@ -646,6 +645,18 @@
   color: var(--basic-ocean);
 }
 
+
+.user-link:hover,
+.marker-color:hover{
+  color: var(--basic-red);
+}
+
+.user-name:active,
+.user-link:active,
+.marker-color:active{
+  color: var(--basic-greylight);
+}
+
 .nav-catalog {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
@@ -737,7 +748,7 @@
   text-transform: uppercase;
   opacity: 0.3;
   border: none;
-background:var(--basic-white) ;
+  background: var(--basic-white);
   /*img?*/
   border-bottom: 1px dashed var(--basic-red);
 }
@@ -753,4 +764,79 @@ background:var(--basic-white) ;
   border: none;
 }
 
+.catalog-page-list {
+  list-style: none;
+}
+
+.current-page,
+.next-page {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  border: 1px solid var(--button-catalog-filter);
+  color: var(--basic-black);
+  width: 38px;
+  height: 38px;
+}
+
+.current-page {
+  background-color: var(--basic-red);
+}
+
+.next-page-text {
+  text-transform: uppercase;
+}
+
+.current-page:hover,
+.next-page:hover {
+  border-color: #c5c5c5;
+}
+
+.current-page:active,
+.next-page:active {
+  border-color: var(--basic-red);
+}
+
+.about-drill{
+  background-color:var(--basic-smoky-white);
+}
+
+.about-drill-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.about-drill-text {
+  font-family: "PT Sans", Arial ,sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color:var(--basic-black);
+}
+
+.modal-info-text{
+font-family: "Cuprum",Arial, sans-serif;
+font-size: 24px;
+font-weight: 700;
+line-height: 30px;
+color:var(--basic-black);
+}
+
+.button-continue{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 192px;
+  height: 38px;
+  border: none;
+  text-decoration: none;
+  color: var(--basic-black);
+  background-color:var(--basic-white)
+}
 
