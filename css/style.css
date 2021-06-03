@@ -89,10 +89,7 @@
 }
 
 .logo {
-  margin-top: 12px;
-  margin-right: 56px;
-  margin-bottom: 17px;
-  margin-left: 56px;
+
 }
 
 .item-search {
@@ -317,10 +314,6 @@
   list-style: none;
 }
 
-.bosch {
-  text-transform: uppercase;
-}
-
 .products-item-header {
   font-family: "PT Sans Bold", Arial, sans-serif;
   font-weight: 700;
@@ -423,37 +416,31 @@
   line-height: 24px;
   color: var(--basic-black);
 }
+
 .tab-service-list {
   list-style: none;
 }
 
-.tab-service-item {
-  font-family: "Cuprum Bold", Arial, sans-serif;
-  font-weight: 700;
+.tab-service-text {
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
+  font-weight: 700;
   line-height: 30px;
+  border: none;
   color: var(--basic-white);
   background-color: var(--basic-ocean);
-  width: 240px;
-  height: 61px;
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
 }
 
-.tab-service-item:hover {
+.tab-service-text:hover {
   background-color: var(--basic-ocean-blue);
   color: var(--basic-white);
 }
 
-.tab-service-item:active {
+.tab-service-text:active {
   background-color: var(--basic-white);
   color: var(--basic-ocean);
 }
-
-.tab-service-text {
-  margin: 0;
-  padding: 0;
-}
-
 .service-list {
   list-style: none;
 }
@@ -645,15 +632,14 @@
   color: var(--basic-ocean);
 }
 
-
 .user-link:hover,
-.marker-color:hover{
+.marker-color:hover {
   color: var(--basic-red);
 }
 
 .user-name:active,
 .user-link:active,
-.marker-color:active{
+.marker-color:active {
   color: var(--basic-greylight);
 }
 
@@ -798,8 +784,8 @@
   border-color: var(--basic-red);
 }
 
-.about-drill{
-  background-color:var(--basic-smoky-white);
+.about-drill {
+  background-color: var(--basic-smoky-white);
 }
 
 .about-drill-header {
@@ -812,22 +798,22 @@
 }
 
 .about-drill-text {
-  font-family: "PT Sans", Arial ,sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
-  color:var(--basic-black);
+  color: var(--basic-black);
 }
 
-.modal-info-text{
-font-family: "Cuprum",Arial, sans-serif;
-font-size: 24px;
-font-weight: 700;
-line-height: 30px;
-color:var(--basic-black);
+.modal-info-text {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--basic-black);
 }
 
-.button-continue{
+.button-continue {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -837,6 +823,5 @@ color:var(--basic-black);
   border: none;
   text-decoration: none;
   color: var(--basic-black);
-  background-color:var(--basic-white)
+  background-color: var(--basic-white);
 }
-
