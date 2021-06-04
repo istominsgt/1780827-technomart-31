@@ -58,6 +58,8 @@
   --form-placeholder: #a9a9a9;
   --button-catalog-filter: #e5e5e5;
   --pagination-border: #c5c5c5;
+  --old-price: #A9A9A9;;
+
 }
 
 .page-body {
@@ -89,7 +91,6 @@
 }
 
 .logo {
-
 }
 
 .item-search {
@@ -320,6 +321,31 @@
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
+}
+
+.products-item {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color:var(--basic-black);
+}
+.old-price,
+.price{
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color:var(--basic-red);
+  width: 144px;
+  height: 38px;
+}
+
+.old-price{
+  color:var(--old-price);
+  background-color:var(--basic-white);
+  text-decoration-line: line-through;
 }
 
 .button-buy {
@@ -612,12 +638,8 @@
   color: var(--basic-black);
 }
 
-.user-menu-list .user-menu-orders {
+.user-menu-list {
   list-style: none;
-}
-
-.marker-color {
-  color: var(--basic-ocean);
 }
 
 .user-link {
@@ -632,8 +654,7 @@
   color: var(--basic-ocean);
 }
 
-.user-link:hover,
-.marker-color:hover {
+.user-link:hover {
   color: var(--basic-red);
 }
 
