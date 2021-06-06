@@ -58,8 +58,11 @@
   --form-placeholder: #a9a9a9;
   --button-catalog-filter: #e5e5e5;
   --pagination-border: #c5c5c5;
-  --old-price: #A9A9A9;;
+  --old-price: #a9a9a9;
+}
 
+.page {
+  height: 100%;
 }
 
 .page-body {
@@ -72,14 +75,23 @@
   font-weight: 400;
   background-color: var(--basic-white);
   color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .main-header {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
   color: var(--basic-white);
   background-color: var(--basic-smoky-white);
 }
 
 .top-navigation {
+  outline: 5px solid rgba(255, 7, 69, 0.212);
+  outline-offset: -5px;
   background-color: var(--basic-ocean-blue);
 }
 
@@ -328,23 +340,23 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
-  color:var(--basic-black);
+  color: var(--basic-black);
 }
 .old-price,
-.price{
+.price {
   font-family: "PT Sans Bold", Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
   color: var(--basic-white);
-  background-color:var(--basic-red);
+  background-color: var(--basic-red);
   width: 144px;
   height: 38px;
 }
 
-.old-price{
-  color:var(--old-price);
-  background-color:var(--basic-white);
+.old-price {
+  color: var(--old-price);
+  background-color: var(--basic-white);
   text-decoration-line: line-through;
 }
 
