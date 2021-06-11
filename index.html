@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
 <head>
   <meta charset="utf-8" />
   <title>Интернет-магазин Техномарт</title>
   <link rel="icon" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body class="page-body">
   <header class="main-header">
     <div class="top-navigation">
       <div class="container">
         <div class="top-navigation-wrapper">
-          <div class="logo-wrapper">
-            <a href="#">
-              <img class="logo" src="img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип">
-            </a>
-          </div>
+          <a class="logo-wrapper" href="#">
+            <img src="img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип">
+          </a>
           <form class="top-navigation-form" action="https://echo.htmlacademy.ru/" method="GET">
             <label for="search-form">
               <img class="icon-search" src="img/icons/icon-search.svg" width="17" height="17" alt="Иконка поиска">
@@ -36,8 +32,8 @@
                   width="15" height="15" alt="Иконка корзины">Корзина: 0
               </a>
             </li>
-            <li class="top-navigation-item arrange">
-              <a class="link-no-decor top-nav-link" href="#">Оформить заказ</a></li>
+            <li class="top-navigation-item ">
+              <a class="link-no-decor top-nav-link-order" href="#">Оформить заказ</a></li>
           </ul>
         </div>
       </div>
@@ -131,6 +127,7 @@
         <div class="popular-products-wrapper">
           <h2 class="popular-header">Популярные товары:</h2>
           <a class="button" href="#">Все популярные товары</a>
+        </div>
           <ul class="products-list">
             <li class="products-item">
               <h3 class="products-item-header">Перфоратор BOSCH BFG 9000</h3>
@@ -172,7 +169,7 @@
               <p class="format"><button class="button-in-bookmarks" type="button">В закладки</button></p>
             </li>
           </ul>
-        </div>
+
       </div>
     </section>
     <section class="popular-manufacturers">
@@ -235,7 +232,7 @@
         <div class="tab-service-wrapper">
           <ul class="tab-service-list">
             <li class="tab-service-item">
-              <button class="tab-service-text" type="button">Доставка</button>
+              <button class="tab-service-text tab-service-text-active" type="button">Доставка</button>
             </li>
             <li class="tab-service-item">
               <button class="tab-service-text" type="button">Гарантия</button>
