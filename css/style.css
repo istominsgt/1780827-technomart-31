@@ -180,6 +180,8 @@
 .user-block-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-top: 41px;
+  margin-bottom: 67px;
 }
 
 .user-block-wrapper-catalog {
@@ -271,6 +273,7 @@
 
 .main-navigation {
   background-color: var(--basic-ocean);
+  margin-bottom: 60px;
 }
 
 .site-navigation {
@@ -291,17 +294,22 @@
 .nav-item:hover {
 }
 
-.main-elements {
-}
-
-.main-elements-wrapper {
-  display: grid;
+.main-elements{
+  margin-bottom: 59px;
 }
 
 .elements-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 123px 123px 123px;
+  gap: 20px;
   padding: 0;
-  margin: 0;
   list-style: none;
+}
+
+.slider{
+  grid-column: 1/3;
+  grid-row: 2/4;
 }
 
 .elements-item {
@@ -309,8 +317,8 @@
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
-  width: 300px;
-  height: 123px;
+  /* width: 300px;
+  height: 123px; */
 }
 
 .material {
@@ -407,6 +415,10 @@
   background-color: var(--red-active);
 }
 
+.popular-products{
+  margin-bottom: 70px;
+}
+
 .popular-header {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
@@ -417,12 +429,14 @@
   padding: 0;
   margin: 0;
   background-color: var(--white-gray);
+  margin-bottom: 20px;
 }
 
 .popular-products-wrapper {
   display: flex;
   justify-content: space-between;
   background-color: var(--white-gray);
+  margin-bottom: 20px;
 }
 
 .products-list {
@@ -539,6 +553,10 @@
   margin: 0;
 }
 
+.popular-manufacturers{
+  margin-bottom: 70px;
+}
+
 .popular-manufacturers-wrapper {
   display: grid;
   grid-template-columns: 1fr 192px;
@@ -571,8 +589,11 @@
 }
 
 .service {
+  margin-bottom:  70px;
   background-color: var(--basic-smoky-white);
 }
+
+
 
 .service-header {
   font-family: "Cuprum", Arial, sans-serif;
@@ -581,8 +602,9 @@
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
-  padding: 0;
-  margin: 0;
+  padding-top: 64px;
+  padding-bottom: 25px;
+  margin:0;
 }
 
 .service-text {
@@ -592,7 +614,7 @@
   line-height: 24px;
   color: var(--basic-black);
   padding: 0;
-  margin: 0;
+  margin:0;
 }
 
 .tab-service-wrapper {
@@ -601,7 +623,7 @@
 }
 
 .tab-service-list {
-  padding: 0;
+  padding-top:  70px;
   margin: 0;
   list-style: none;
 }
@@ -646,7 +668,7 @@
   line-height: 30px;
   color: var(--basic-ocean);
   text-transform: uppercase;
-  padding: 0;
+  padding-top:70px;
   margin: 0;
 }
 
@@ -657,6 +679,10 @@
   border: none;
   border-radius: 2px;
   padding: 0;
+}
+
+.about{
+  margin-bottom: 70px;
 }
 
 .about-company-wrapper {
@@ -672,8 +698,9 @@
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
-  padding: 0;
+  padding-bottom:  24px;
   margin: 0;
+
 }
 
 .about-company-text {
