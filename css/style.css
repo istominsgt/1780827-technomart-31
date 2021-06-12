@@ -229,6 +229,7 @@
   color: var(--basic-red);
   padding: 0;
   margin: 0;
+  width: 197px;
 }
 
 .header-telephone {
@@ -902,9 +903,14 @@
   line-height: 21px;
   font-weight: 400;
   color: var(--basic-black);
+  padding: 0;
+  margin: 0;
 }
 
 .user-menu-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -938,9 +944,16 @@
   text-transform: uppercase;
 }
 
+.nav-catalog-item:not(:first-child){
+  margin-left: 40px;
+}
+
+
+
 .nav-catalog-list {
+  display: flex;
   padding: 0;
-  margin: 0;
+ margin: 0;
   list-style: none;
 }
 

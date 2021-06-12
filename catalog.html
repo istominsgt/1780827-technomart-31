@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8" />
   <title>Интернет-магазин Техномарт</title>
@@ -12,11 +11,9 @@
     <div class="top-navigation">
       <div class="container">
         <div class="top-navigation-wrapper">
-          <div class="logo-wrapper">
-            <a href="index.html">
-              <img class="logo" src="img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип">
-            </a>
-          </div>
+          <a class="logo-wrapper" href="#">
+            <img src="img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип">
+          </a>
           <form class="top-navigation-form" action="https://echo.htmlacademy.ru/" method="GET">
             <label for="search-form">
               <img class="icon-search" src="img/icons/icon-search.svg" width="17" height="17" alt="Иконка поиска">
@@ -31,12 +28,12 @@
               </a>
             </li>
             <li class="top-navigation-item">
-              <a class="link-no-decor top-nav-link cart-buy" href="#"><img class="icon-cart"
-                  src="img/icons/icon-cart.svg" width="15" height="15" alt="Иконка корзины">Корзина: 10
+              <a class="link-no-decor top-nav-link cart-buy" href="#"><img class="icon-cart" src="img/icons/icon-cart.svg"
+                  width="15" height="15" alt="Иконка корзины">Корзина: 0
               </a>
             </li>
-            <li class="top-navigation-item arrange">
-              <a class="link-no-decor top-nav-link" href="#">Оформить заказ</a></li>
+            <li class="top-navigation-item ">
+              <a class="link-no-decor top-nav-link-order" href="#">Оформить заказ</a></li>
           </ul>
         </div>
       </div>
@@ -277,46 +274,48 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="container">
-      <div class="footer-wrapper">
-        <a class="footer-logo">
-          <img src="img/icons/logo-technomart-footer.svg" width="138" height="23" alt="Логотип">
-        </a>
-        <nav class="footer-navigation">
-          <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
-              <a class="footer-nav-link" href="#">Компания</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-nav-link" href="#">Новости</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-nav-link" href="#">Каталог</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-nav-link" href="#">Доставка</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="footer-adress">
-          <p class="text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
-          <a class="footer-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
-        </div>
+    <div class="footer-top">
+      <div class="container">
         <div class="footer-menu">
-          <ul class="footer-menu-list">
-            <li class="footer-menu-item">
+          <a class="footer-logo">
+            <img src="img/icons/logo-technomart-footer.svg" width="138" height="23" alt="Логотип">
+          </a>
+          <nav class="footer-navigation">
+            <ul class="footer-navigation-list">
+              <li class="footer-navigation-item">
+                <a class="footer-nav-link" href="#">Компания</a>
+              </li>
+              <li class="footer-navigation-item">
+                <a class="footer-nav-link" href="#">Новости</a>
+              </li>
+              <li class="footer-navigation-item">
+                <a class="footer-nav-link" href="#">Каталог</a>
+              </li>
+              <li class="footer-navigation-item">
+                <a class="footer-nav-link" href="#">Доставка</a>
+              </li>
+              <li class="footer-navigation-item">
+                <a class="footer-nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-sub-menu">
+          <div class="footer-addres">
+            <p class="text">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+            <a class="footer-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </div>
+          <ul class="footer-sub-menu-list">
+            <li class="footer-sub-menu-item">
               <a class="footer-nav-link color-gold" href="#">Материалы</a>
             </li>
-            <li class="footer-menu-item">
+            <li class="footer-sub-menu-item">
               <a class="footer-nav-link color-gold" href="#">Техника</a>
             </li>
-            <li class="footer-menu-item">
+            <li class="footer-sub-menu-item">
               <a class="footer-nav-link color-gold" href="#">Инструмент</a>
             </li>
-            <li class="footer-menu-item">
+            <li class="ffooter-sub-menu-item">
               <a class="footer-nav-link color-gold" href="#">Спецпредложения</a>
             </li>
           </ul>
@@ -324,9 +323,9 @@
       </div>
     </div>
     <section class="footer-contacts">
+      <h2 class="visibility-hidden">контактная информация</h2>
       <div class="container">
-        <div class="footer-contacts-wrapper">
-          <h2 class="visibility-hidden">контактная информация</h2>
+        <div class="footer-copyright-wrapper">
           <p class="footer-copyright">
             © 2010–2021 Компания «Техномарт» <br />
             Все права защищены
@@ -348,17 +347,20 @@
               </a>
             </li>
           </ul>
-          <p class="footer-contacts-info">
-            Обратная связь:
-            <a class="mail color-gold" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <p class="footer-contacts-info">
-            Разработано -
-            <a class="site color-gold" href="#">htmlacademy.ru</a>
-          </p>
+          <div class="footer-contacts-wrapper">
+            <p class="footer-contacts-info">
+              Обратная связь:
+              <a class="mail color-gold" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </p>
+            <p class="footer-contacts-info">
+              Разработано -
+              <a class="site color-gold" href="#">htmlacademy.ru</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
+  </footer>
   </footer>
   <section class="modal-info">
     <h2 class="visibility-hidden">Добавление товара в корзину</h2>
