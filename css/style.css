@@ -145,14 +145,12 @@
   outline: none;
 }
 
-.item-search:active{
+.item-search:active {
   color: rgba(255, 255, 255, 0.5);
-
 }
 
-
 .item-search:focus {
-  font-family: "Cuprum",Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -294,7 +292,7 @@
 .nav-item:hover {
 }
 
-.main-elements{
+.main-elements {
   margin-bottom: 59px;
 }
 
@@ -307,7 +305,7 @@
   list-style: none;
 }
 
-.slider{
+.slider {
   grid-column: 1/3;
   grid-row: 2/4;
 }
@@ -415,7 +413,7 @@
   background-color: var(--red-active);
 }
 
-.popular-products{
+.popular-products {
   margin-bottom: 70px;
 }
 
@@ -441,6 +439,7 @@
 
 .products-list {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -454,9 +453,6 @@
   margin: 0;
 }
 
-.products-list-wrapper {
-}
-
 .products-item-header {
   font-family: "PT Sans Bold", Arial, sans-serif;
   font-weight: 700;
@@ -465,6 +461,7 @@
   color: var(--basic-black);
   padding: 0;
   margin: 0;
+  width: 220px;
 }
 
 .products-item {
@@ -480,7 +477,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid var(--white-border);
 }
+
+.products-item-img {
+  padding: 0;
+  margin: 0;
+  width: 184px;
+  height: 164px;
+}
+
 .old-price,
 .price {
   font-family: "PT Sans Bold", Arial, sans-serif;
@@ -553,7 +559,7 @@
   margin: 0;
 }
 
-.popular-manufacturers{
+.popular-manufacturers {
   margin-bottom: 70px;
 }
 
@@ -589,11 +595,9 @@
 }
 
 .service {
-  margin-bottom:  70px;
+  margin-bottom: 70px;
   background-color: var(--basic-smoky-white);
 }
-
-
 
 .service-header {
   font-family: "Cuprum", Arial, sans-serif;
@@ -604,7 +608,7 @@
   text-transform: uppercase;
   padding-top: 64px;
   padding-bottom: 25px;
-  margin:0;
+  margin: 0;
 }
 
 .service-text {
@@ -614,7 +618,7 @@
   line-height: 24px;
   color: var(--basic-black);
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 .tab-service-wrapper {
@@ -623,7 +627,7 @@
 }
 
 .tab-service-list {
-  padding-top:  70px;
+  padding-top: 70px;
   margin: 0;
   list-style: none;
 }
@@ -668,7 +672,7 @@
   line-height: 30px;
   color: var(--basic-ocean);
   text-transform: uppercase;
-  padding-top:70px;
+  padding-top: 70px;
   margin: 0;
 }
 
@@ -681,7 +685,7 @@
   padding: 0;
 }
 
-.about{
+.about {
   margin-bottom: 70px;
 }
 
@@ -698,9 +702,8 @@
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
-  padding-bottom:  24px;
+  padding-bottom: 24px;
   margin: 0;
-
 }
 
 .about-company-text {
@@ -728,13 +731,8 @@
   /* list-style-image: url("../img/icons/icon-line.svg");*/
 }
 
-.main-footer {
+.footer-top {
   background-color: var(--basic-ocean);
-}
-
-.footer-wrapper {
-  display: grid;
-  grid-template-columns: 220px 1fr;
 }
 
 .footer-logo {
@@ -749,10 +747,13 @@
 }
 
 .footer-navigation-list {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-top: 37px;
+  width: 546px;
 }
 
 .footer-nav-link {
@@ -769,15 +770,33 @@
   opacity: 0.5;
 }
 
-.footer-menu-list {
-  display: grid;
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-sub-menu-list {
+  display: flex;
+  justify-content: space-between;
+  width: 524px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
+.footer-sub-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+  padding-bottom: 74px;
+}
+
 .color-gold {
   color: var(--basic-gold);
+}
+
+.mail {
+  margin-right: 51px;
 }
 
 .mail,
@@ -797,12 +816,20 @@
 }
 
 .footer-contacts {
+  padding-top: 34px;
+  padding-bottom: 29px;
   background-color: var(--basic-ocean-blue);
 }
 
 .footer-contacts-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  width: 286px;
+  justify-content: flex-end;
+}
+
+.footer-copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-contacts-info {
@@ -816,6 +843,7 @@
 }
 
 .footer-social-list {
+  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
