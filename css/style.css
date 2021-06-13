@@ -303,6 +303,7 @@
   grid-template-rows: 123px 123px 123px;
   gap: 20px;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -450,8 +451,9 @@
   display: grid;
   list-style: none;
   grid-template-columns: 220px 220px 220px;
+  gap: 20px;
   padding: 0;
-  margin: 0;
+  margin-left: 20px;
 }
 
 .products-item-header {
@@ -482,6 +484,9 @@
 }
 
 .products-item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
   width: 184px;
@@ -565,8 +570,10 @@
 }
 
 .popular-manufacturers-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 192px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white-gray);
+  margin-bottom: 20px;
 }
 
 .manufacturers-list {
@@ -643,6 +650,7 @@
   background-color: var(--basic-ocean);
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
   padding: 0;
+  width: 100%;
 }
 
 .tab-service-text:hover {
@@ -753,7 +761,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-top: 37px;
   width: 546px;
 }
 
@@ -824,8 +831,6 @@
 
 .footer-contacts-wrapper {
   display: flex;
-  width: 286px;
-  justify-content: flex-end;
 }
 
 .footer-copyright-wrapper {
@@ -834,11 +839,23 @@
 }
 
 .footer-contacts-info {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-copyright {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
   padding: 0;
   margin: 0;
 }
@@ -944,16 +961,14 @@
   text-transform: uppercase;
 }
 
-.nav-catalog-item:not(:first-child){
+.nav-catalog-item:not(:first-child) {
   margin-left: 40px;
 }
-
-
 
 .nav-catalog-list {
   display: flex;
   padding: 0;
- margin: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -971,7 +986,7 @@
   color: var(--basic-ocean);
   background-color: var(--basic-smoky-white);
   padding: 0;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .filter-catalog-wrapper {
@@ -1064,9 +1079,16 @@
 }
 
 .catalog-page-list {
+  display: flex;
+  justify-content: flex-start;
   padding: 0;
-  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 59px;
   list-style: none;
+}
+
+.catalog-page-item{
+  margin-right: 10px;
 }
 
 .current-page,
@@ -1110,8 +1132,9 @@
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
-  padding: 0;
-  margin: 0;
+  padding-top:64px;
+  padding-bottom: 25px;
+ margin: 0;
 }
 
 .about-drill-text {
@@ -1120,7 +1143,7 @@
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-black);
-  padding: 0;
+  padding-bottom: 68px;
   margin: 0;
 }
 
