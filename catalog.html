@@ -40,7 +40,7 @@
             </li>
             <li class="top-navigation-item">
               <a class="top-nav-link catalog-basket link-no-decor" href="#">Корзина: 0
-                <svg class="icon-basket"width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="icon-basket" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.3">
                     <path
                       d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -117,7 +117,7 @@
     </section>
     <div class="container">
       <h1 class="catalog-header">Перфораторы</h1>
-      <div class="filter-catalog-wrapper">
+      <div class="catalog-wrapper">
         <section class="filter-catalog">
           <h2 class="visibility-hidden">Фильтр товаров</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
@@ -176,15 +176,18 @@
             <button class="button-catalog-filter" type="submit">Показать</button>
           </form>
         </section>
-        <section class="sort-catalog">
-          <h2 class="sort-text">Сортировка:</h2>
-          <ul class="sort-catalog-list">
-            <li class="sort-catalog-item"><button class="button-sort" type="button">по цене</button></li>
-            <li class="sort-catalog-item"><button class="button-sort" type="button">по типу</button></li>
-            <li class="sort-catalog-item"><button class="button-sort" type="button">по функционалу</button></li>
-            <!--<li class="sort-catalog-item"><button class="button-sort shape-up" type="button">убывание</button></li>
-            <li class="sort-catalog-item"><button class="button-sort shape-down" type="button">нарастание</button></li>-->
-          </ul>
+        <section class="products-catalog">
+          <h2 class="visibility-hidden">Наши товары</h2>
+          <div class="sorting">
+            <h2 class="sort-text">Сортировка:</h2>
+            <ul class="sort-catalog-list">
+              <li class="sort-catalog-item"><button class="button-sort" type="button">по цене</button></li>
+              <li class="sort-catalog-item"><button class="button-sort" type="button">по типу</button></li>
+              <li class="sort-catalog-item"><button class="button-sort" type="button">по функционалу</button></li>
+              <!--<li class="sort-catalog-item"><button class="button-sort shape-up" type="button">убывание</button></li>
+              <li class="sort-catalog-item"><button class="button-sort shape-down" type="button">нарастание</button></li>-->
+            </ul>
+          </div>
           <ul class="catalog-products-list">
             <li class="products-item">
               <p class="products-item-img"><img src="img/content/bfg6000.jpg" width="144" height="128" alt="Картинка bosch bfg 6000" /></p>
