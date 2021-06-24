@@ -150,7 +150,7 @@
   margin-left: 220px;
 }
 
-.top-navigation-form input {
+.item-search {
   width: 271px;
   height: 42px;
   padding-top: 0;
@@ -159,7 +159,7 @@
   padding-left: 48px;
 }
 
-.top-navigation-form label {
+.icon-search {
   position: absolute;
   top: 12px;
   left: 17px;
@@ -169,6 +169,10 @@
   background: var(--basic-ocean-blue);
   border: none;
   outline: none;
+}
+
+.item-search:hover + .icon-search {
+  opacity: 1;
 }
 
 .item-search:active {
@@ -184,6 +188,11 @@
   letter-spacing: 0px;
   text-align: left;
   background-color: var(--basic-white);
+}
+
+.item-search:focus + .icon-search {
+  fill: var(--basic-red);
+  opacity: 1;
 }
 
 .item-search::placeholder {
@@ -358,7 +367,12 @@
   margin-right: 6px;
 }
 
-/* .icon-search:hover g{
+.icon-search {
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+/* .item-search:hover .icon-search {
   opacity: 1;
 } */
 
@@ -562,24 +576,77 @@
   list-style: none;
 }
 
-.slider-item {
+.slider-item-1 {
+  background-image: url("..//img/content/man-slider-1.jpg");
+  background-repeat: no-repeat;
+  width: 620px;
+  height: 266px;
+}
+
+.slider-description {
+  height: 104px;
+  padding-top: 23px;
+  padding-left: 24px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.slider-controls {
+  position: relative;
+  top: 220px;
+  left: 295px;
+}
+
+.slider-controls-item::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-item::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--basic-red);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-item-1::before {
+  content: "";
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-buttons {
   position: relative;
 }
 
-.slider-item::before {
+.slider-left::before {
   content: "";
   position: absolute;
   width: 24px;
   height: 24px;
-  border: 3px solid #fff;
+  border: 3px solid var(--basic-white);
   top: 122px;
   left: 24px;
   transform: rotate(45deg);
   border-top-style: none;
   border-right-style: none;
+  cursor: pointer;
 }
-
-.slider-item::after {
+.slider-right::after {
   content: "";
   position: absolute;
   width: 24px;
@@ -590,18 +657,15 @@
   transform: rotate(225deg);
   border-top-style: none;
   border-right-style: none;
+  cursor: pointer;
 }
 
-.slider-item .button {
-  position: absolute;
-  bottom: 27px;
-  left: 24px;
+.slider-item-1 .button {
+  margin-top: 97px;
+  margin-left: 24px;
 }
 
 .slider-header {
-  position: absolute;
-  top: 23px;
-  left: 24px;
   font-family: "Cuprum Bold", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -617,11 +681,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  position: absolute;
-  left: 24px;
-  top: 64px;
   padding: 0;
-  margin: 0;
+  margin-top: 5px;
 }
 
 .button {
@@ -708,11 +769,14 @@
   line-height: 20px;
   color: var(--basic-black);
   padding: 0;
+  padding-left: 18px;
+  padding-right: 17px;
   margin: 0;
   width: 220px;
 }
 
 .products-item {
+  position: relative;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -724,8 +788,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   border: 1px solid var(--white-border);
+  width: 220px;
+  background-color: var(--basic-white);
 }
 
 .catalog .products-item {
@@ -745,7 +810,6 @@
   margin-bottom: 18px;
 }
 
-
 .products-item-img {
   display: flex;
   align-items: center;
@@ -758,6 +822,9 @@
 
 .old-price,
 .price {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-family: "PT Sans Bold", Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -776,22 +843,45 @@
   text-decoration-line: line-through;
 }
 
-.item-button-wrapper {
-  display: none;
+.price {
+  width: 120px;
+  position: relative;
+}
+
+.price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-style: solid;
+  border-width: 19px 0 19px 19px;
+  border-color: transparent transparent transparent var(--basic-red);
 }
 
 .item-button {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+  padding-top: 38px;
   margin: 0;
+  width: 100%;
+  display: none;
+  height: 164px;
+  position: absolute;
+  background: white;
 }
 
-.products-item:hover .item-button-wrapper {
+.products-item:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.products-item:hover .item-button {
   display: block;
 }
 
 .button-buy {
+  position: relative;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -804,6 +894,17 @@
   width: 135px;
   height: 38px;
   text-transform: uppercase;
+  padding-left: 15px;
+}
+
+.button-buy::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url("..//img/icons/icon-cart.svg");
+  top: 10px;
+  left: 30px;
 }
 
 .button-buy:hover {
@@ -826,6 +927,7 @@
   text-transform: uppercase;
   border: 3px solid var(--basic-green);
   box-sizing: border-box;
+  margin-top: 10px;
 }
 
 .button-in-bookmarks:hover {
@@ -839,6 +941,7 @@
 .new-item {
   background-image: url("../img/content/catalog-new.png");
   background-repeat: no-repeat;
+  background-position: 150px 0;
   padding: 0;
   margin: 0;
 }
@@ -1004,7 +1107,7 @@
 }
 
 .service-img {
-  background-image: url(..//img/content/truck-delivery.png);
+  background-image: url("..//img/content/truck-delivery.png");
   width: 468px;
   height: 261px;
   padding: 0;
@@ -1399,7 +1502,7 @@
 .sorting {
   display: flex;
   background-color: var(--basic-catalog-filter);
-  margin-left:21px;
+  margin-left: 21px;
 }
 
 .legend-text {
@@ -1557,4 +1660,17 @@
   text-decoration: none;
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+/* Modal */
+
+.modal{
+  width: 620px;
+  height: 430px;
+  border-top: 7px solid var(--basic-red);
+  background-color:var(--basic-white);
+}
+
+.feedback-form{
+  
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-<head></head>
-<meta charset="utf-8" />
-<title>Интернет-магазин Техномарт</title>
-<link rel="icon" href="favicon.ico" />
-<link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="utf-8" />
+  <title>Интернет-магазин Техномарт</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="page-body">
   <header class="main-header">
@@ -16,20 +16,19 @@
           </a>
           <form class="top-navigation-form" action="https://echo.htmlacademy.ru/" method="GET">
             <input class="item-search" type="search" id="search-form" placeholder="Поиск:" />
-            <label for="search-form">
-              <svg class="icon-search" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.3">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
-                    fill="white" />
-                </g>
-              </svg>
+            <svg class="icon-search" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" />
+            </svg>
+            <label class="visibility-hidden" for="search-form">
+              Поле поиска
             </label>
           </form>
           <ul class="top-navigation-list">
             <li class="top-navigation-item">
               <a class="top-nav-link link-no-decor" href="#">Закладки: 0
-                <svg class="icon-bookmarks" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="icon-bookmarks" width="14" height="16" viewBox="0 0 14 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.3">
                     <path
                       d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
@@ -40,7 +39,8 @@
             </li>
             <li class="top-navigation-item">
               <a class="top-nav-link link-no-decor" href="#">Корзина: 0
-                <svg class="icon-basket"width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="icon-basket" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <g opacity="0.3">
                     <path
                       d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -145,22 +145,40 @@
             <a class="link-no-decor shop-link" href="#">бесплатно</a>
           </li>
           <li class="elements-item slider">
-            <!-- <img src="img/icons/icon-slider-left.svg" width="22" height="40" alt="Иконка прокрутки слайдера влево">
-              <img src="img/icons/icon-slider-right.svg" width="22" height="40" alt="Иконка прокрутки слайдера вправо"> -->
-            <ul class="slider-list">
-              <li class="slider-item">
-                <img src="img/content/man-slider-1.jpg" width="620" height="266" alt="Картинка слайдера №1" />
-                <h3 class="slider-header">Перфораторы</h3>
-                <p class="slider-text">Настоящие мужские игрушки</p>
-                <a class="button link-no-decor" href="catalog.html">открыть каталог</a>
-              </li>
-              <!-- <li class="slider-item">
-                  <img src="img/content/man-slider-2.jpg" width="620" height="266" alt="Картинка слайдера №2" />
-                  <h3 class="slider-header">Дрели</h3>
-                  <p class="text">Соседям на радость!</p>
+            <div class="slider-wrapper">
+              <!-- <input type="radio" id="slider-1" name="toggle" checked>
+              <input type="radio" id="slider-2" name="toggle"> -->
+              <div class="slider-controls">
+                <label class="slider-controls-item slider-controls-item-1" for="slider-2">
+                  <span class="visibility-hidden">Первый</span>
+                </label>
+                <label class="slider-controls-item" for="slider-1">
+                  <span class="visibility-hidden">Второй</span>
+                </label>
+              </div>
+              <div class="slider-controls-buttons">
+                <label class="slider-left" for="slider-1">
+                  <span class="visibility-hidden">Влево</span>
+                </label>
+                <label class="slider-right" for="slider-2">
+                  <span class="visibility-hidden">Вправо</span>
+                </label>
+              </div>
+              <ul class="slider-list">
+                <li class="slider-item-1">
+                  <div class="slider-description">
+                    <h3 class="slider-header">Перфораторы</h3>
+                    <p class="slider-text">Настоящие мужские игрушки</p>
+                  </div>
                   <a class="button link-no-decor" href="catalog.html">открыть каталог</a>
-                </li> -->
-            </ul>
+                </li>
+                <!-- <li class="slider-item-2">
+                  <h3 class="slider-header">Дрели</h3>
+                   <p class="text">Соседям на радость!</p>
+                  <a class="button link-no-decor" href="catalog.html">открыть каталог</a>
+                  </li> -->
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -173,12 +191,10 @@
         </div>
         <ul class="products-list">
           <li class="products-item">
-            <div class="item-button-wrapper">
-              <p class="item-button">
-                <button class="button-buy" type="button">Купить</button>
-                <button class="button-in-bookmarks" type="button">В закладки</button>
-              </p>
-            </div>
+            <p class="item-button">
+              <button class="button-buy" type="button">Купить</button>
+              <button class="button-in-bookmarks" type="button">В закладки</button>
+            </p>
             <p class="products-item-img">
               <img src="img/content/bfg9000.jpg" width="184" height="164" alt="Картинка bosch bfg 9000" />
             </p>
@@ -187,51 +203,42 @@
             <p class="price">25500 Р.</p>
           </li>
           <li class="products-item new-item">
+            <p class="item-button">
+              <button class="button-buy" type="button">Купить</button>
+              <button class="button-in-bookmarks" type="button">В закладки</button>
+            </p>
             <p class="products-item-img">
               <img src="img/content/bfg3000.jpg" width="127" height="112" alt="Картинка bosch bfg 3000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 3000</h3>
             <p class="old-price">22500 Р.</p>
             <p class="price">15500 Р.</p>
-            <p class="format">
-              <button class="button-buy" type="button">Купить</button>
-            </p>
-            <p class="format">
-              <button class="button-in-bookmarks" type="button">
-                В закладки
-              </button>
             </p>
           </li>
           <li class="products-item">
+            <p class="item-button">
+              <button class="button-buy" type="button">Купить</button>
+              <button class="button-in-bookmarks" type="button">В закладки</button>
+            </p>
             <p class="products-item-img">
               <img src="img/content/bfg6000.jpg" width="144" height="128" alt="Картинка bosch bfg 6000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 6000</h3>
             <p class="old-price">30500 Р.</p>
             <p class="price">25500 Р.</p>
-            <p class="format">
-              <button class="button-buy" type="button">Купить</button>
-            </p>
-            <p class="format">
-              <button class="button-in-bookmarks" type="button">
-                В закладки
-              </button>
             </p>
           </li>
           <li class="products-item new-item">
+            <p class="item-button">
+              <button class="button-buy" type="button">Купить</button>
+              <button class="button-in-bookmarks" type="button">В закладки</button>
+            </p>
             <p class="products-item-img">
               <img src="img/content/bfg2000.jpg" width="127" height="112" alt="Картинка bosch bfg 2000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 2000</h3>
             <p class="old-price">22500 Р.</p>
             <p class="price">15500 Р.</p>
-            <p class="format">
-              <button class="button-buy" type="button">Купить</button>
-            </p>
-            <p class="format">
-              <button class="button-in-bookmarks" type="button">
-                В закладки
-              </button>
             </p>
           </li>
         </ul>
@@ -314,16 +321,16 @@
           </ul>
           <ul class="service-list">
             <li class="service-item">
-                  <h3 class="service-list-header">Доставка</h3>
-                  <p class="service-text-delivery">
-                    Мы с удовольствием доставим ваш товар прямо к вашему подьезду
-                    совершеннно бесплатно!Ведь мы неплохо заработаем,поднимая его
-                    на ваш этаж.
-                  </p>
-                <p class="service-img">
+              <h3 class="service-list-header">Доставка</h3>
+              <p class="service-text-delivery">
+                Мы с удовольствием доставим ваш товар прямо к вашему подьезду
+                совершеннно бесплатно!Ведь мы неплохо заработаем,поднимая его
+                на ваш этаж.
+              </p>
+              <p class="service-img">
 
-                  <!-- <img src="img/content/truck-delivery.png" width="468" height="261" alt="Картинка машины доставки" /> -->
-                </p>
+                <!-- <img src="img/content/truck-delivery.png" width="468" height="261" alt="Картинка машины доставки" /> -->
+              </p>
             </li>
             <!-- <li class="service-item">
               <h3 class="service-list-header">Гарантия</h3>
@@ -485,18 +492,21 @@
       <img src="img/icons/icon-close.svg" width="21" height="21" alt="Иконка закрытия формы" />
     </button>
     <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-      <label class="form-name" for="my-name">Ваше имя:</label>
-      <input class="form-name-placeholder" type="text" id="my-name" name="name-inf" placeholder="Имя Фамилия" />
-      <label class="form-email" for="my-mail">Ваше е-mail:</label>
-      <input class="form-email-placeholder" type="text" id="my-mail" name="name-mail" placeholder="email@example.com" />
-      <label class="form-text" for="letter">Текст письма:</label>
-      <textarea class="form-text-placeholder" cols="24" rows="6" id="letter" name="letter"
-        placeholder="В свободной форме"></textarea>
+      <div class="modal-wrapper">
+        <label class="form-name" for="my-name">Ваше имя:</label>
+        <input class="form-name-placeholder" type="text" id="my-name" name="name-inf" placeholder="Имя Фамилия" />
+        <label class="form-email" for="my-mail">Ваше е-mail:</label>
+        <input class="form-email-placeholder" type="text" id="my-mail" name="name-mail"
+          placeholder="email@example.com" />
+        <label class="form-text" for="letter">Текст письма:</label>
+        <textarea class="form-text-placeholder" cols="24" rows="6" id="letter" name="letter"
+          placeholder="В свободной форме">
+        </textarea>
+      </div>
       <button class="button button-footer-form" type="submit">
         Отправить
       </button>
     </form>
   </section>
 </body>
-
 </html>
