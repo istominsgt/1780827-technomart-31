@@ -303,9 +303,6 @@
   width: 197px;
 }
 
-.shop-info {
-}
-
 .header-telephone {
   border: 3px solid var(--basic-white);
   position: relative;
@@ -419,9 +416,6 @@
   padding: 19px;
 }
 
-.nav-item:hover {
-}
-
 .main-elements {
   margin-bottom: 59px;
 }
@@ -506,6 +500,7 @@
   left: 191px;
   top: 31px;
 }
+
 .sales {
   background-color: var(--sales);
 }
@@ -646,6 +641,7 @@
   border-right-style: none;
   cursor: pointer;
 }
+
 .slider-right::after {
   content: "";
   position: absolute;
@@ -790,6 +786,7 @@
   align-items: center;
   border: 1px solid var(--white-border);
   width: 220px;
+  height: 318px;
   background-color: var(--basic-white);
 }
 
@@ -1349,6 +1346,32 @@
   list-style: none;
 }
 
+.footer-social-item {
+  width: 44px;
+  height: 44px;
+  background-color: #212a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.footer-social-item:hover {
+  background-color: var(--basic-red);
+}
+
+.social-link {
+  display: flex;
+}
+
+.vk {
+  margin-right: 5px;
+}
+
+.instagram {
+  margin-left: 5px;
+}
+
 .modal {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
@@ -1381,7 +1404,7 @@
 }
 
 .button-footer-form {
-  width: 480px;
+  width: 460px;
   height: 38px;
 }
 
@@ -1390,9 +1413,9 @@
   background-color: var(--basic-white);
 }
 
-.button-exit:hover {
+/* .button-exit:hover {
   border: 3px solid var(--red-hover);
-}
+} */
 
 .button-exit:active {
   opacity: 0.5;
@@ -1664,13 +1687,80 @@
 
 /* Modal */
 
-.modal{
+.modal {
+  position: relative;
   width: 620px;
   height: 430px;
   border-top: 7px solid var(--basic-red);
-  background-color:var(--basic-white);
+  background-color: var(--basic-white);
+  padding-top: 39px;
 }
 
-.feedback-form{
-  
+.button-exit {
+  position: absolute;
+  right: 11px;
+  top: 14px;
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+.form-name-placeholder,
+.form-email-placeholder,
+.form-text-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.form-name {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.form-name-placeholder {
+  width: 220px;
+  height: 38px;
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+  padding: 7px 8px 7px 12px;
+}
+
+.form-email-placeholder {
+  width: 220px;
+  height: 38px;
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+  padding: 7px 10px 7px 12px;
+}
+
+.form-email {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.form-text {
+  display: block;
+  margin: 13px 0 11px;
+}
+
+.form-text-placeholder {
+  padding: 6px 0 0 12px;
+  width: 460px;
+  height: 114px;
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+  resize: none;
+}
+
+.button-footer {
+  padding: 37px 80px;
+  margin: 37px 0 0 0;
+  background-color: var(--form-background);
 }

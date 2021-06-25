@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8"/>
   <title>Интернет-магазин Техномарт</title>
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body class="page-body">
   <header class="main-header">
@@ -146,8 +147,8 @@
           </li>
           <li class="elements-item slider">
             <div class="slider-wrapper">
-              <!-- <input type="radio" id="slider-1" name="toggle" checked>
-              <input type="radio" id="slider-2" name="toggle"> -->
+              <input class="visibility-hidden" type="radio" id="slider-1" name="toggle" checked/>
+              <input class="visibility-hidden" type="radio" id="slider-2" name="toggle"/>
               <div class="slider-controls">
                 <label class="slider-controls-item slider-controls-item-1" for="slider-2">
                   <span class="visibility-hidden">Первый</span>
@@ -193,7 +194,9 @@
           <li class="products-item">
             <p class="item-button">
               <button class="button-buy" type="button">Купить</button>
-              <button class="button-in-bookmarks" type="button">В закладки</button>
+              <button class="button-in-bookmarks" type="button">
+                В закладки
+              </button>
             </p>
             <p class="products-item-img">
               <img src="img/content/bfg9000.jpg" width="184" height="164" alt="Картинка bosch bfg 9000" />
@@ -205,7 +208,9 @@
           <li class="products-item new-item">
             <p class="item-button">
               <button class="button-buy" type="button">Купить</button>
-              <button class="button-in-bookmarks" type="button">В закладки</button>
+              <button class="button-in-bookmarks" type="button">
+                В закладки
+              </button>
             </p>
             <p class="products-item-img">
               <img src="img/content/bfg3000.jpg" width="127" height="112" alt="Картинка bosch bfg 3000" />
@@ -213,12 +218,13 @@
             <h3 class="products-item-header">Перфоратор BOSCH BFG 3000</h3>
             <p class="old-price">22500 Р.</p>
             <p class="price">15500 Р.</p>
-            </p>
           </li>
           <li class="products-item">
             <p class="item-button">
               <button class="button-buy" type="button">Купить</button>
-              <button class="button-in-bookmarks" type="button">В закладки</button>
+              <button class="button-in-bookmarks" type="button">
+                В закладки
+              </button>
             </p>
             <p class="products-item-img">
               <img src="img/content/bfg6000.jpg" width="144" height="128" alt="Картинка bosch bfg 6000" />
@@ -226,12 +232,13 @@
             <h3 class="products-item-header">Перфоратор BOSCH BFG 6000</h3>
             <p class="old-price">30500 Р.</p>
             <p class="price">25500 Р.</p>
-            </p>
           </li>
           <li class="products-item new-item">
             <p class="item-button">
               <button class="button-buy" type="button">Купить</button>
-              <button class="button-in-bookmarks" type="button">В закладки</button>
+              <button class="button-in-bookmarks" type="button">
+                В закладки
+              </button>
             </p>
             <p class="products-item-img">
               <img src="img/content/bfg2000.jpg" width="127" height="112" alt="Картинка bosch bfg 2000" />
@@ -239,7 +246,6 @@
             <h3 class="products-item-header">Перфоратор BOSCH BFG 2000</h3>
             <p class="old-price">22500 Р.</p>
             <p class="price">15500 Р.</p>
-            </p>
           </li>
         </ul>
       </div>
@@ -313,10 +319,14 @@
               </button>
             </li>
             <li class="tab-service-item">
-              <button class="tab-service-text guarantee" type="button">Гарантия</button>
+              <button class="tab-service-text guarantee" type="button">
+                Гарантия
+              </button>
             </li>
             <li class="tab-service-item">
-              <button class="tab-service-text credits" type="button">Кредит</button>
+              <button class="tab-service-text credits" type="button">
+                Кредит
+              </button>
             </li>
           </ul>
           <ul class="service-list">
@@ -328,7 +338,6 @@
                 на ваш этаж.
               </p>
               <p class="service-img">
-
                 <!-- <img src="img/content/truck-delivery.png" width="468" height="261" alt="Картинка машины доставки" /> -->
               </p>
             </li>
@@ -452,23 +461,33 @@
       <div class="container">
         <div class="footer-copyright-wrapper">
           <p class="footer-copyright">
-            © 2010–2021 Компания «Техномарт» <br />
+            © 2010–2021 Компания «Техномарт» <br/>
             Все права защищены
           </p>
           <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a href="#" class="social-link vk">
-                <img src="img/icons/icon-vk.svg" width="44" height="44" alt="Логотип Вконтакте" />
+            <li class="footer-social-item vk">
+              <a href="#" class="social-link">
+                <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.5403 11.7281C16.4609 11.4384 17.6395 13.6406 18.8943 14.4834C19.836 15.1219 20.5573 14.9841 20.5573 14.9841L23.9017 14.9372C23.9017 14.9372 25.6495 14.8322 24.8232 13.4803C24.7549 13.3678 24.3389 12.4781 22.334 10.6472C20.2376 8.73186 20.5217 9.04218 23.0456 5.73093C24.5835 3.71249 25.1988 2.47968 25.0062 1.95468C24.8213 1.44936 23.6918 1.58061 23.6918 1.58061L19.9237 1.60593C19.5568 1.60686 19.2458 1.71749 19.1042 2.08874C19.1013 2.09249 18.5062 3.65061 17.7127 4.9753C16.0362 7.77749 15.3669 7.92655 15.0896 7.75124C14.4531 7.3453 14.6139 6.1228 14.6139 5.25374C14.6139 2.5378 15.0299 1.4053 13.7992 1.1128C13.388 1.0153 13.0876 0.951552 12.0389 0.942177C10.6985 0.922489 9.56027 0.942177 8.91508 1.25061C8.48656 1.45968 8.15819 1.91811 8.35753 1.94436C8.6079 1.97718 9.1693 2.09436 9.46975 2.49374C9.8559 3.01124 9.84434 4.17093 9.84434 4.17093C9.84434 4.17093 10.0649 7.36874 9.32434 7.7653C8.8159 8.03718 8.12064 7.48218 6.62516 4.9378C5.86153 3.63655 5.28471 2.19843 5.28471 2.19843C5.28471 2.19843 5.17301 1.93124 4.97079 1.78499C4.73005 1.61155 4.39301 1.55624 4.39301 1.55624L0.816563 1.57874C0.816563 1.57874 0.27923 1.59374 0.0818227 1.82436C-0.0934366 2.02874 0.0673782 2.45061 0.0673782 2.45061C0.0673782 2.45061 2.86864 8.90155 6.04064 12.1509C8.94879 15.1341 12.2537 14.9362 12.2537 14.9362H13.7511C13.7511 14.9362 14.2027 14.8856 14.4338 14.6437C14.6495 14.4187 14.6399 13.9959 14.6399 13.9959C14.6399 13.9959 14.61 12.0187 15.5403 11.7281Z"
+                    fill="white" />
+                </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a href="#" class="social-link facebook">
-                <img src="img/icons/icon-facebook.svg" width="44" height="44" alt="Логотип Facebook" />
+            <li class="footer-social-item facebook">
+              <a href="#" class="social-link">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+                </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a href="#" class="social-link instagram">
-                <img src="img/icons/icon-instagram.svg" width="44" height="44" alt="Логотип Instagram" />
+            <li class="footer-social-item instagram">
+              <a href="#" class="social-link">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
+                    fill="white" />
+                </svg>
               </a>
             </li>
           </ul>
@@ -489,23 +508,33 @@
   <section class="modal">
     <h2 class="visibility-hidden">Форма обратной связи</h2>
     <button class="button-exit" type="button" title="Закрыть">
-      <img src="img/icons/icon-close.svg" width="21" height="21" alt="Иконка закрытия формы" />
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z"
+          fill="#EE3643" />
+      </svg>
     </button>
     <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="modal-wrapper">
-        <label class="form-name" for="my-name">Ваше имя:</label>
-        <input class="form-name-placeholder" type="text" id="my-name" name="name-inf" placeholder="Имя Фамилия" />
-        <label class="form-email" for="my-mail">Ваше е-mail:</label>
-        <input class="form-email-placeholder" type="text" id="my-mail" name="name-mail"
-          placeholder="email@example.com" />
-        <label class="form-text" for="letter">Текст письма:</label>
-        <textarea class="form-text-placeholder" cols="24" rows="6" id="letter" name="letter"
-          placeholder="В свободной форме">
-        </textarea>
+        <p class="format">
+          <label class="form-name" for="my-name">Ваше имя:</label>
+          <input class="form-name-placeholder" type="text" id="my-name" name="name-inf" placeholder="Имя Фамилия" />
+        </p>
+        <p class="format">
+          <label class="form-email" for="my-mail">Ваше е-mail:</label>
+          <input class="form-email-placeholder" type="text" id="my-mail" name="name-mail"
+            placeholder="email@example.com" />
+        </p>
+        <p class="format">
+          <label class="form-text" for="letter">Текст письма:</label>
+          <textarea class="form-text-placeholder" id="letter" name="letter" placeholder="В свободной форме"></textarea>
+        </p>
       </div>
-      <button class="button button-footer-form" type="submit">
-        Отправить
-      </button>
+      <p class="button-footer">
+        <button class="button button-footer-form" type="submit">
+          Отправить
+        </button>
+      </p>
     </form>
   </section>
 </body>
