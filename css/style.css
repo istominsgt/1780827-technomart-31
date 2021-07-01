@@ -170,7 +170,7 @@
   outline: none;
 }
 
-.item-search:hover + .icon-search {
+.item-search:hover+.icon-search {
   opacity: 1;
 }
 
@@ -189,7 +189,7 @@
   background-color: var(--basic-white);
 }
 
-.item-search:focus + .icon-search {
+.item-search:focus+.icon-search {
   fill: var(--basic-red);
   opacity: 1;
 }
@@ -1453,9 +1453,9 @@
   color: var(--basic-black);
 }
 
-.user-name::before{
-  content:"";
-  background-image:url("..//img/icons/icon-user.svg");
+.user-name::before {
+  content: "";
+  background-image: url("..//img/icons/icon-user.svg");
   width: 20px;
   height: 18px;
   top: 13px;
@@ -1463,12 +1463,12 @@
   position: absolute;
 }
 
-.login-exit-button{
+.login-exit-button {
   position: absolute;
-  top:14px;
-  right:17px;
-  border:none;
-  background-color:var(--basic-white);
+  top: 14px;
+  right: 17px;
+  border: none;
+  background-color: var(--basic-white);
 
 }
 
@@ -1484,19 +1484,17 @@
   justify-content: space-evenly;
 }
 
-.user-menu-item{
+.user-menu-item {}
 
-}
-
-.user-menu-item::before{
-  content:"";
+.user-menu-item::before {
+  content: "";
   width: 6px;
   height: 7px;
-  border-radius:50%;
+  border-radius: 50%;
   top: 9px;
   left: 133px;
   position: absolute;
-  background-color:var(--basic-ocean);
+  background-color: var(--basic-ocean);
 }
 
 .user-link {
@@ -1539,21 +1537,25 @@
   list-style: none;
 }
 
+.nav-catalog-item {
+  position: relative;
+}
+
 .nav-catalog-item:not(:first-child) {
   margin-left: 40px;
 }
-.nav-catalog-item{
-  position: relative;
-}
-/* .nav-catalog-list:first-child::after{
+
+
+.nav-catalog-item:not(:last-child)::after {
+  content: "";
   position: absolute;
-  content:"";
-  width:8px;
+  background-image: url("../img/icons/icon-right-small.svg");
+  width: 8px;
   height: 12px;
-  top:3px;
-  left: 15px;
-  background-image:url("..//img/icons/icon-right-small.svg");
-} */
+  top: 3px;
+  right: -25px;
+}
+
 
 .breadcrumbs {
   text-decoration: none;
@@ -1568,7 +1570,7 @@
   text-transform: uppercase;
   color: var(--basic-ocean);
   background-color: var(--basic-smoky-white);
-  padding:29px 0 0 29px;
+  padding: 29px 0 0 29px;
   margin-bottom: 20px;
   height: 89px;
 }
@@ -1595,14 +1597,66 @@
 
 }
 
-.filter-text{
+.filter-catalog {
+  width: 220px;
+}
+
+.filter-text {
   padding: 10px 0 10px 18px;
   height: 38px;
 }
 
-.sort-text{
-
+.filter-fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
+
+.legend-text-price {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  padding-top: 14.15px;
+  padding-bottom: 10.85px;
+}
+
+
+.manufacturers-fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.legend-text-manufacturers {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  padding-top: 42px;
+}
+
+.power-supply-fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.legend-text-power-supply {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  padding-top: 46px;
+}
+
+.button-catalog-filter {}
 
 .sorting {
   display: flex;
@@ -1612,14 +1666,6 @@
   height: 38px;
 }
 
-.legend-text {
-  font-family: "PT Sans Bold", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: var(--basic-black);
-}
 
 .range {
   background-color: var(--basic-catalog-filter);
@@ -1633,6 +1679,47 @@
   color: var(--basic-black);
   text-transform: uppercase;
   list-style: none;
+  padding: 0;
+  padding-left: 35px;
+}
+
+.filter-catalog-item:first-child {
+  margin-bottom: 20.5px;
+}
+
+.filter-catalog-item {
+  margin-bottom: 20px;
+}
+
+.filter-catalog-item .power {
+  margin-bottom: 22.5px;
+}
+
+.filter-option {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons/checkbox-off.svg");
+  top: -2px;
+  left: -35px;
+  width: 23px;
+  height: 23px;
+}
+
+.filter-input-checkbox:checked+.filter-option::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons/checkbox-on.svg");
+  top: -2px;
+  left: -35px;
+  width: 27px;
+  height: 23px;
 }
 
 .button-catalog-filter {
@@ -1647,6 +1734,8 @@
   text-transform: uppercase;
   width: 220px;
   height: 38px;
+  padding: 0;
+  margin-top: 37.15px;
 }
 
 .sort-catalog-list {
