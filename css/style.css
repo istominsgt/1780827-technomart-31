@@ -65,6 +65,7 @@
   --top-nav-link-order-active: #5fbb2d;
   --icon-login-hover: #3d546f;
   --nav-current: #1d2739;
+  --toggle: #ababab;
 }
 
 * {
@@ -170,7 +171,7 @@
   outline: none;
 }
 
-.item-search:hover+.icon-search {
+.item-search:hover + .icon-search {
   opacity: 1;
 }
 
@@ -189,7 +190,7 @@
   background-color: var(--basic-white);
 }
 
-.item-search:focus+.icon-search {
+.item-search:focus + .icon-search {
   fill: var(--basic-red);
   opacity: 1;
 }
@@ -337,6 +338,7 @@
   color: var(--basic-ocean);
   padding: 0;
   margin: 0;
+  margin-top: 3px;
   text-align: center;
 }
 
@@ -1469,22 +1471,20 @@
   right: 17px;
   border: none;
   background-color: var(--basic-white);
-
 }
-
-
 
 .user-menu-list {
   position: relative;
   display: flex;
   padding: 0;
   margin: 0;
-
+  margin-top: 7px;
   list-style: none;
   justify-content: space-evenly;
 }
 
-.user-menu-item {}
+.user-menu-item {
+}
 
 .user-menu-item::before {
   content: "";
@@ -1506,7 +1506,6 @@
   text-decoration: none;
 }
 
-
 .user-link:hover {
   color: var(--basic-red);
 }
@@ -1524,7 +1523,6 @@
   line-height: 18px;
   text-transform: uppercase;
 }
-
 
 .nav-catalog-item:not(:first-child) {
   margin-left: 40px;
@@ -1545,7 +1543,6 @@
   margin-left: 40px;
 }
 
-
 .nav-catalog-item:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -1555,7 +1552,6 @@
   top: 3px;
   right: -25px;
 }
-
 
 .breadcrumbs {
   text-decoration: none;
@@ -1594,7 +1590,18 @@
   background-color: var(--basic-catalog-filter);
   padding: 0;
   margin: 0;
+}
 
+.filter-text {
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+}
+
+.sort-text {
+  display: flex;
+  align-items: center;
+  margin-left: 19px;
 }
 
 .filter-catalog {
@@ -1622,7 +1629,6 @@
   padding-top: 14.15px;
   padding-bottom: 10.85px;
 }
-
 
 .manufacturers-fieldset {
   padding: 0;
@@ -1656,7 +1662,8 @@
   padding-top: 46px;
 }
 
-.button-catalog-filter {}
+.button-catalog-filter {
+}
 
 .sorting {
   display: flex;
@@ -1664,11 +1671,85 @@
   margin-left: 21px;
   width: 700px;
   height: 38px;
+  justify-content: space-between;
 }
 
-
-.range {
+.range-controls {
+  position: relative;
+  width: 220px;
+  height: 80px;
+  margin-bottom: 9px;
   background-color: var(--basic-catalog-filter);
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 3px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toggle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.price-controls::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icons/dash.svg");
+  top: 18px;
+  left: 105px;
+  width: 18px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+
+.price-controls .price-number {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  width: 95px;
+  height: 38px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--basic-catalog-filter);
+  padding: 0;
 }
 
 .filter-catalog-list {
@@ -1712,7 +1793,7 @@
   height: 23px;
 }
 
-.filter-input-checkbox:checked+.filter-option::after {
+.filter-input-checkbox:checked + .filter-option::after {
   content: "";
   position: absolute;
   background-image: url("../img/icons/checkbox-on.svg");
@@ -1720,6 +1801,36 @@
   left: -35px;
   width: 27px;
   height: 23px;
+}
+
+.power-supply-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.power-supply-label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 5px solid #c5c5c5;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+}
+
+.filter-input-checkbox:checked + .power-supply-label::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.5px;
+  left: -28.5px;
+}
+
+.power-supply-label {
 }
 
 .button-catalog-filter {
@@ -1745,7 +1856,64 @@
   list-style: none;
 }
 
+.sort-catalog-item {
+  display: flex;
+  align-items: center;
+}
+
+.sort-catalog-item:nth-child(1) {
+  margin-right: 70px;
+}
+.sort-catalog-item:nth-child(2) {
+  margin-right: 65px;
+}
+
+.sort-catalog-item:nth-child(3) {
+  margin-right: 46px;
+}
+
+.button-shape {
+  border: none;
+  padding: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5.5px 10px 5.5px;
+  border-color: transparent transparent var(--pagination-border) transparent;
+}
+
+.button-shape:hover {
+  border-color: var(--basic-black) transparent transparent transparent;
+  opacity: 1;
+}
+
+.button-shape-active {
+  border-color: transparent transparent var(--basic-red) transparent;
+}
+
+.button-shape-active:hover {
+  border-color: transparent transparent var(--basic-black) transparent;
+}
+
+.button-shape-up {
+  margin-right: 21px;
+}
+
+.button-shape-down {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5.5px 0 5.5px;
+  border-color: var(--pagination-border) transparent transparent transparent;
+  margin-right: 17px;
+}
+
+/* .down {
+  margin-left: 21px;
+} */
+
 .button-sort {
+  padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -1755,6 +1923,12 @@
   border: none;
   background: var(--basic-catalog-filter);
   border-bottom: 1px dashed var(--basic-red);
+}
+
+.button-sort-active {
+  color: var(--basic-red);
+  opacity: 1;
+  border-bottom: none;
 }
 
 .button-sort:hover {
@@ -1858,7 +2032,7 @@
   background-color: var(--basic-white);
 }
 
-/* Modal */
+/* Modal index*/
 
 .modal {
   position: relative;

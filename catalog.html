@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8" />
   <title>Интернет-магазин Техномарт</title>
   <link rel="icon" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body class="page-body catalog">
   <header class="main-header">
     <div class="top-navigation">
@@ -148,15 +146,23 @@
             <p class="filter-text">Фильтр:</p>
             <fieldset class="filter-fieldset">
               <legend class="legend-text-price">Цена:</legend>
-              <div class="range">
-                <label class="visibility-hidden" for="scroll">Диапозон</label>
-                <input type="range" min="0" max="30000" step="1" value="25000" id="scroll">
-              </div>
-              <div class="range">
-                <label for="min-range"></label>
-                <input type="text" value="0" id="min-range">
-                <label for="max-range"></label>
-                <input type="text" value="30000" id="max-range">
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar">
+                    </div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                 <div class="price-controls">
+                   <label class="min-price">
+                   <input class="price-number"  type="text" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                  <input class="price-number"  type="text" name="max-price" value="30000">
+                  </label>
+                </div>
               </div>
             </fieldset>
             <fieldset class="manufacturers-fieldset">
@@ -193,12 +199,12 @@
               <legend class="legend-text-power-supply">Питание:</legend>
               <ul class="filter-catalog-list">
                 <li class="filter-catalog-item power">
-                  <input type="radio" name="product-group" value="battery" id="filter-battery" checked>
-                  <label for="filter-battery">аккумуляторные</label>
+                  <input class="visibility-hidden filter-input-checkbox" type="radio" name="product-group" value="battery" id="filter-battery" checked>
+                  <label class="power-supply-label" for="filter-battery">аккумуляторные</label>
                 </li>
                 <li class="filter-catalog-item power">
-                  <input type="radio" name="product-group" value="mains" id="filter-mains">
-                  <label for="filter-mains">сетевые</label>
+                  <input class="visibility-hidden filter-input-checkbox" type="radio" name="product-group" value="mains" id="filter-mains">
+                  <label class="power-supply-label" for="filter-mains">сетевые</label>
                 </li>
               </ul>
             </fieldset>
@@ -210,11 +216,21 @@
           <div class="sorting">
             <h2 class="sort-text">Сортировка:</h2>
             <ul class="sort-catalog-list">
-              <li class="sort-catalog-item"><button class="button-sort" type="button">по цене</button></li>
-              <li class="sort-catalog-item"><button class="button-sort" type="button">по типу</button></li>
-              <li class="sort-catalog-item"><button class="button-sort" type="button">по функционалу</button></li>
-              <!--<li class="sort-catalog-item"><button class="button-sort shape-up" type="button">убывание</button></li>
-              <li class="sort-catalog-item"><button class="button-sort shape-down" type="button">нарастание</button></li>-->
+              <li class="sort-catalog-item">
+                <button class="button-sort button-sort-active" type="button">по цене</button>
+              </li>
+              <li class="sort-catalog-item">
+                <button class="button-sort" type="button">по типу</button>
+              </li>
+              <li class="sort-catalog-item">
+                <button class="button-sort" type="button">по функционалу</button>
+              </li>
+              <li class="sort-catalog-item">
+                <button class="button-shape button-shape-up button-shape-active" type="button"></button>
+              </li>
+              <li class="sort-catalog-item">
+                <button class="button-shape button-shape-down" type="button"></button>
+              </li>
             </ul>
           </div>
           <ul class="catalog-products-list">
