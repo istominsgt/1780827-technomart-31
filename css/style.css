@@ -50,7 +50,7 @@
   --basic-greylight: #c5c5c5;
   --basic-catalog-filter: #f7f3ec;
   --basic-green: #63a63e;
-  --form-background: #f4f4f4;
+  --form-background: #f1f1f1;
   --material: #ffbf47;
   --instruments: #3bbce3;
   --technic: #dc91d8;
@@ -66,7 +66,7 @@
   --icon-login-hover: #3d546f;
   --nav-current: #1d2739;
   --toggle: #ababab;
-  --radio-button-hover: #B5B5B5;
+  --radio-button-hover: #b5b5b5;
 }
 
 * {
@@ -172,7 +172,7 @@
   outline: none;
 }
 
-.item-search:hover+.icon-search {
+.item-search:hover + .icon-search {
   opacity: 1;
 }
 
@@ -191,7 +191,7 @@
   background-color: var(--basic-white);
 }
 
-.item-search:focus+.icon-search {
+.item-search:focus + .icon-search {
   fill: var(--basic-red);
   opacity: 1;
 }
@@ -1421,13 +1421,12 @@
 }
 
 .button-exit {
+  position: absolute;
+  right: 11px;
+  top: 14px;
   border: none;
   background-color: var(--basic-white);
 }
-
-/* .button-exit:hover {
-  border: 3px solid var(--red-hover);
-} */
 
 .button-exit:active {
   opacity: 0.5;
@@ -1471,7 +1470,6 @@
   left: 15px;
 }
 
-
 .login-exit-button {
   position: absolute;
   top: 14px;
@@ -1490,8 +1488,6 @@
   fill: var(--pagination-border);
 }
 
-
-
 .user-menu-list {
   position: relative;
   display: flex;
@@ -1501,8 +1497,6 @@
   list-style: none;
   justify-content: space-evenly;
 }
-
-
 
 .user-menu-item::before {
   content: "";
@@ -1527,7 +1521,6 @@
 .user-link:hover {
   color: var(--basic-red);
 }
-
 
 .user-link:active,
 .marker-color:active {
@@ -1683,8 +1676,6 @@
   padding-top: 18px;
 }
 
-
-
 .sorting {
   display: flex;
   background-color: var(--basic-catalog-filter);
@@ -1808,21 +1799,36 @@
 .filter-option::before {
   content: "";
   position: absolute;
-  background-image: url("../img/icons/checkbox-off.svg");
+  border: 2px solid var(--basic-greylight);
+  border-radius: 4px;
   top: -2px;
   left: -35px;
   width: 23px;
   height: 23px;
 }
 
-.filter-input-checkbox:checked+.filter-option::after {
+.filter-option:hover::before {
+  border-color: var(--radio-button-hover);
+}
+
+.filter-input-checkbox:checked + .filter-option::after {
   content: "";
+  width: 17px;
+  height: 9px;
+  border-width: 4px;
+  border-style: none none solid solid;
+  border-color: var(--basic-greylight);
+  border-image: initial;
   position: absolute;
-  background-image: url("../img/icons/checkbox-on.svg");
-  top: -2px;
-  left: -35px;
-  width: 27px;
-  height: 23px;
+  top: -1px;
+  left: -28px;
+  transform: rotate(-48deg);
+  box-shadow: rgb(255 255 255) 0px -2px 0px 0px inset,
+    rgb(255 255 255) 0px 2px 0px 0px;
+}
+
+.filter-input-checkbox:checked + .filter-option:hover::after {
+  border-color: var(--radio-button-hover);
 }
 
 .power-supply-label {
@@ -1843,12 +1849,9 @@
 
 .power-supply-label:hover::before {
   border-color: var(--radio-button-hover);
-
 }
 
-
-
-.filter-input-checkbox:checked+.power-supply-label::after {
+.filter-input-checkbox:checked + .power-supply-label::after {
   content: "";
   width: 9px;
   height: 9px;
@@ -1859,9 +1862,8 @@
   left: -28.5px;
 }
 
-.filter-input-checkbox:checked+.power-supply-label:hover::after {
-
-  background-color: var(--radio-button-hover)  ;
+.filter-input-checkbox:checked + .power-supply-label:hover::after {
+  background-color: var(--radio-button-hover);
 }
 
 .button-catalog-filter {
@@ -1939,7 +1941,6 @@
   border-color: var(--pagination-border) transparent transparent transparent;
   margin-right: 17px;
 }
-
 
 .button-sort {
   padding: 0;
@@ -2082,6 +2083,10 @@
   text-decoration: none;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
 }
 
 /* Modal index*/
@@ -2093,12 +2098,6 @@
   border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
   padding-top: 39px;
-}
-
-.button-exit {
-  position: absolute;
-  right: 11px;
-  top: 14px;
 }
 
 .modal-wrapper {
@@ -2162,4 +2161,54 @@
   padding: 37px 80px;
   margin: 37px 0 0 0;
   background-color: var(--form-background);
+}
+
+/* Modal catalog */
+
+.modal-info {
+  position: relative;
+  border-top: 7px solid var(--basic-red);
+  width: 620px;
+  height: 282px;
+  padding-top: 73px;
+}
+
+.button-exit-catalog {
+  position: absolute;
+  right: 11px;
+  top: 14px;
+  border: none;
+  background-color: var(--basic-white);
+}
+
+.modal-info-text {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: var(--basic-white);
+}
+
+.modal-info-text::before {
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: 81px;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/icons/icon-mark.svg");
+}
+
+.button-wrapper-modal {
+  margin-top: 104.43px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--form-background);
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
+
+.button-modal-catalog{
+  margin-right: 5px;
+
 }
