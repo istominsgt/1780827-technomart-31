@@ -31,6 +31,7 @@
 }
 
 :root {
+  --tab-background: #405069;
   --basic-ocean-blue: #293449;
   --basic-ocean: #32425c;
   --basic-smoky-white: #f1f5f7;
@@ -67,6 +68,10 @@
   --nav-current: #1d2739;
   --toggle: #ababab;
   --radio-button-hover: #b5b5b5;
+  --social-link-backround: #212a3a;
+  --range-controls-scale: #d7dcde;
+  --range-controls-bar: #00ca74;
+  --range-controls-shadow: #cfcfcf;
 }
 
 * {
@@ -176,7 +181,7 @@
   outline: none;
 }
 
-.item-search:hover + .icon-search {
+.item-search:hover+.icon-search {
   opacity: 1;
 }
 
@@ -195,7 +200,7 @@
   background-color: var(--basic-white);
 }
 
-.item-search:focus + .icon-search {
+.item-search:focus+.icon-search {
   fill: var(--basic-red);
   opacity: 1;
 }
@@ -218,7 +223,6 @@
   position: relative;
   width: 150px;
   text-align: center;
-  /* padding-top: 9px; */
 }
 
 .icon-bookmarks {
@@ -232,12 +236,6 @@
   left: 25px;
   top: 12px;
 }
-
-/* .top-navigation-item svg {
-  position: absolute;
-  left: 10px;
-  top: 12px;
-} */
 
 .user-block-wrapper {
   display: flex;
@@ -328,6 +326,11 @@
   height: 45px;
 }
 
+.catalog .header-telephone {
+  padding-top: 5px;
+  margin-left: 18px
+}
+
 .header-telephone-number {
   font-size: 21px;
   line-height: 30px;
@@ -357,6 +360,10 @@
   margin: 0;
   margin-top: 3px;
   text-align: center;
+}
+
+.catalog .header-adress {
+  padding-left: 20px;
 }
 
 .user-block-list {
@@ -466,8 +473,6 @@
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
-  /* width: 300px;
-  height: 123px; */
 }
 
 .material {
@@ -672,7 +677,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  border: 3px solid #fff;
+  border: 3px solid var(--basic-white);
   top: 128px;
   right: 26px;
   transform: rotate(225deg);
@@ -824,7 +829,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
   border: 1px solid var(--white-border);
   margin-bottom: 18px;
   width: 220px;
@@ -1013,7 +1017,7 @@
 .manufacturers-item {
   width: 220px;
   height: 145px;
-  background: #ffffff;
+  background: var(--basic-white);
   border: 1px solid var(--white-border);
   box-sizing: border-box;
   cursor: pointer;
@@ -1055,7 +1059,7 @@
 .service-text {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 24px;
   color: var(--basic-black);
   padding: 0;
@@ -1065,8 +1069,8 @@
 .service-text-delivery {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 25px;
   color: var(--basic-black);
   padding: 0;
   margin: 0;
@@ -1092,7 +1096,7 @@
 .tab-service-list::before {
   content: "";
   position: absolute;
-  background-image: url(..//img/icons/line.png);
+  background-image: url("..//img/icons/line.png");
   background-repeat: no-repeat;
   width: 10px;
   height: 279px;
@@ -1131,15 +1135,15 @@
 .tab-service-text-active {
   background-color: var(--basic-white);
   color: var(--basic-ocean);
-  box-shadow: 0px 1px 0px #ffffff;
+  box-shadow: 0px 1px 0px var(--basic-white);
 }
 
 .guarantee {
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-ocean-blue), inset 0px 1px 0px var(--tab-background);
 }
 
 .credits {
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-ocean-blue), inset 0px 1px 0px var(--tab-background);
 }
 
 .service-list {
@@ -1208,12 +1212,12 @@
 .about-company-text {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 24px;
   color: var(--basic-black);
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .contacts-text {
@@ -1265,7 +1269,7 @@
   margin: 0;
   padding: 0;
   margin-left: 37px;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .about-company-item::before {
@@ -1432,7 +1436,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #212a3a;
+  background-color: var(--social-link-backround);
 }
 
 .social-link:hover {
@@ -1461,6 +1465,10 @@
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
+}
+
+.modal-hidden {
+  display: none;
 }
 
 .form-name-placeholder::placeholder,
@@ -1567,6 +1575,13 @@
   margin-top: 7px;
   list-style: none;
   justify-content: space-evenly;
+  margin-top: 3px;
+  padding-left: 7px;
+}
+
+
+.user-link .account {
+  padding-right: 8px;
 }
 
 .user-menu-item::before {
@@ -1601,9 +1616,10 @@
 .nav-catalog {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
+
 }
 
 .nav-catalog-item:not(:first-child) {
@@ -1613,8 +1629,9 @@
 .nav-catalog-list {
   display: flex;
   padding: 0;
-  margin: 21px 0 20px;
+  margin: 21px 0 18px;
   list-style: none;
+  margin-left: 5px;
 }
 
 .nav-catalog-item {
@@ -1622,7 +1639,7 @@
 }
 
 .nav-catalog-item:not(:first-child) {
-  margin-left: 40px;
+  margin-left: 38px;
 }
 
 .nav-catalog-item:not(:last-child)::after {
@@ -1632,12 +1649,17 @@
   width: 8px;
   height: 12px;
   top: 3px;
-  right: -25px;
+  right: -20px;
 }
+
 
 .breadcrumbs {
   text-decoration: none;
   color: var(--basic-black);
+}
+
+.home {
+  padding-top: 2px;
 }
 
 .catalog-header {
@@ -1664,7 +1686,7 @@
 
 .filter-text,
 .sort-text {
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   color: var(--basic-black);
@@ -1744,7 +1766,8 @@
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
-  padding-top: 18px;
+  padding-top: 23px;
+  padding-bottom: 7px;
 }
 
 .sorting {
@@ -1770,13 +1793,13 @@
 
 .range-controls .scale {
   height: 2px;
-  background: #d7dcde;
+  background: var(--range-controls-scale);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background: #00ca74;
+  background: var(--range-controls-bar);
 }
 
 .range-controls .toggle {
@@ -1789,7 +1812,7 @@
   border: 8px solid var(--basic-white);
   background-color: var(--toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--range-controls-shadow);
   cursor: pointer;
 }
 
@@ -1882,7 +1905,7 @@
   border-color: var(--radio-button-hover);
 }
 
-.filter-input-checkbox:checked + .filter-option::after {
+.filter-input-checkbox:checked+.filter-option::after {
   content: "";
   width: 17px;
   height: 9px;
@@ -1898,42 +1921,50 @@
     rgb(255 255 255) 0px 2px 0px 0px;
 }
 
-.filter-input-checkbox:checked + .filter-option:hover::after {
+
+.filter-input-checkbox:checked+.filter-option:hover::after {
   border-color: var(--radio-button-hover);
 }
+
+.filter-input-checkbox:focus+.filter-option::before {
+  outline: 1px solid var(--basic-black);
+}
+
 
 .power-supply-label {
   position: relative;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .power-supply-label::before {
   content: "";
   width: 14px;
   height: 14px;
-  border: 5px solid #c5c5c5;
+  border: 5px solid var(--basic-greylight);
   border-radius: 50%;
   position: absolute;
   top: -4px;
   left: -36px;
 }
 
+
 .power-supply-label:hover::before {
   border-color: var(--radio-button-hover);
 }
 
-.filter-input-checkbox:checked + .power-supply-label::after {
+.filter-input-checkbox:checked+.power-supply-label::after {
   content: "";
   width: 9px;
   height: 9px;
-  background-color: #c5c5c5;
+  background-color: var(--basic-greylight);
   border-radius: 50%;
   position: absolute;
   top: 3.5px;
   left: -28.5px;
 }
 
-.filter-input-checkbox:checked + .power-supply-label:hover::after {
+.filter-input-checkbox:checked+.power-supply-label:hover::after {
   background-color: var(--radio-button-hover);
 }
 
@@ -1950,7 +1981,7 @@
   width: 220px;
   height: 38px;
   padding: 0;
-  margin-top: 37.5px;
+  margin-top: 9.5px;
 }
 
 .sort-catalog-list {
@@ -2016,7 +2047,7 @@
 .button-sort {
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
@@ -2051,6 +2082,7 @@
   margin-left: 20px;
   margin-bottom: 59px;
   list-style: none;
+  padding-top: 12px;
 }
 
 .catalog-page-item {
@@ -2101,7 +2133,7 @@
 
 .current-page:hover,
 .next-page:hover {
-  border-color: #c5c5c5;
+  border-color: var(--basic-greylight);
 }
 
 .current-page:active,
@@ -2127,11 +2159,11 @@
 
 .about-drill-text {
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-black);
-  padding-bottom: 68px;
+  padding-bottom: 69px;
   margin: 0;
 }
 
