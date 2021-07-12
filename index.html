@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8" />
   <title>Интернет-магазин Техномарт</title>
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body class="page-body">
   <header class="main-header">
     <div class="top-navigation">
@@ -147,8 +149,6 @@
           </li>
           <li class="elements-item slider">
             <div class="slider-wrapper">
-              <input class="visually-hidden" type="radio" id="slider-1" name="toggle" checked />
-              <input class="visually-hidden" type="radio" id="slider-2" name="toggle" />
               <div class="slider-controls">
                 <label class="slider-controls-item slider-controls-item-1" for="slider-2">
                   <span class="visually-hidden">Первый</span>
@@ -173,11 +173,13 @@
                   </div>
                   <a class="button link-no-decor" href="catalog.html">открыть каталог</a>
                 </li>
-                <!-- <li class="slider-item-2">
-                  <h3 class="slider-header">Дрели</h3>
-                   <p class="text">Соседям на радость!</p>
+                <li class="slider-item-2 visually-hidden">
+                  <div class="slider-description">
+                    <h3 class="slider-header">Дрели</h3>
+                    <p class="slider-text">Соседям на радость!</p>
+                  </div>
                   <a class="button link-no-decor" href="catalog.html">открыть каталог</a>
-                  </li> -->
+                </li>
               </ul>
             </div>
           </li>
@@ -334,8 +336,8 @@
               <h3 class="service-list-header">Доставка</h3>
               <p class="service-text-delivery">
                 Мы с удовольствием доставим ваш товар прямо <br>
-                к вашему подьезду
-                совершеннно бесплатно! <br>
+                к вашему подъезду
+                совершенно бесплатно! <br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж.
               </p>
@@ -401,11 +403,7 @@
           <p class="about-company-text contacts-text">
             Вы можете забрать товар сами, <br> заехав в наш офис:
           </p>
-          <iframe class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-            width="300" height="158" allowfullscreen
-            title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
-          </iframe>
+          <img src="" alt="">
           <a href="#" class="button button-contacts">Заблудились? Напишите нам!</a>
         </section>
       </div>
@@ -415,7 +413,7 @@
     <div class="footer-top">
       <div class="container">
         <div class="footer-menu">
-          <a class="footer-logo">
+          <a class="footer-logo" href="index.html">
             <img src="img/icons/logo-technomart-footer.svg" width="138" height="23" alt="Логотип" />
           </a>
           <nav class="footer-navigation">
@@ -504,14 +502,14 @@
             </p>
             <p class="footer-contacts-info">
               Разработано -
-              <a class="site color-gold" href="#">htmlacademy.ru</a>
+              <a class="site color-gold" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
             </p>
           </div>
         </div>
       </div>
     </section>
   </footer>
-  <section class="modal modal-hidden">
+  <section class="modal visually-hidden">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <button class="button-exit" type="button" title="Закрыть">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -542,6 +540,21 @@
         </button>
       </p>
     </form>
+  </section>
+  <section class="modal modal-map visually-hidden">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <button class="button-exit" type="button" title="Закрыть">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z"
+          fill="#EE3643" />
+      </svg>
+    </button>
+    <iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+      width="943" height="449" allowfullscreen
+      title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+    </iframe>
   </section>
 </body>
 </html>
