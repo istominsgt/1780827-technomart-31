@@ -47,23 +47,16 @@
   --basic-hover-green: #5fbb2d;
   --basic-active-green: #518534;
   --button-shadow-green: #367315;
-  --basic-gold: #ffd180;
   --basic-greylight: #c5c5c5;
   --basic-catalog-filter: #f7f3ec;
-  --basic-green: #63a63e;
   --form-background: #f1f1f1;
   --material: #ffbf47;
   --instruments: #3bbce3;
   --technic: #dc91d8;
   --sales: #8ed78f;
-  --delivery: #ffbf47;
   --form-placeholder: #a9a9a9;
   --button-catalog-filter: #e5e5e5;
-  --pagination-border: #c5c5c5;
-  --old-price: #a9a9a9;
-  --logo-active: #ba2732;
   --top-nav-link-actve: #161d29;
-  --top-nav-link-order-active: #5fbb2d;
   --icon-login-hover: #3d546f;
   --nav-current: #1d2739;
   --toggle: #ababab;
@@ -398,7 +391,7 @@
 }
 
 .icon-login:active path {
-  fill: var(--pagination-border);
+  fill: var(--basic-greylight);
 }
 
 .enter {
@@ -545,7 +538,7 @@
 }
 
 .delivery {
-  background-color: var(--delivery);
+  background-color: var(--material);
 }
 
 .delivery::after {
@@ -882,7 +875,7 @@
 }
 
 .old-price {
-  color: var(--old-price);
+  color: var(--form-placeholder);
   background-color: var(--basic-white);
   text-decoration-line: line-through;
   padding-bottom: 3px;
@@ -1346,10 +1339,16 @@
   justify-content: center;
 }
 
-.catalog .footer-text {
+.footer-text {
   padding: 0;
   margin: 0;
   margin-top: 9px;
+}
+
+.catalog .footer-text {
+  padding: 0;
+  margin: 0;
+  margin-top: 7px;
 }
 
 .footer-telephone {
@@ -1371,6 +1370,10 @@
   margin-top: 37px;
 }
 
+.catalog .footer-navigation-item {
+  margin-top: 33px;
+}
+
 .footer-nav-link {
   text-decoration: none;
   color: var(--basic-white);
@@ -1388,6 +1391,16 @@
 .footer-menu {
   display: flex;
   justify-content: space-between;
+}
+
+.footer-sub-menu-list {
+  display: flex;
+  justify-content: space-between;
+  width: 524px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 13px;
 }
 
 .catalog .footer-sub-menu-list {
@@ -1408,7 +1421,7 @@
 }
 
 .color-gold {
-  color: var(--basic-gold);
+  color: var(--basic-yellow);
 }
 
 .mail {
@@ -1460,6 +1473,10 @@
   display: flex;
   flex-direction: column;
   padding-top: 2px;
+}
+
+.catalog .footer-contacts-info {
+  padding-top: 3px;
 }
 
 .footer-copyright {
@@ -1593,7 +1610,7 @@
 }
 
 .user-name-link:active {
-  color: var(--pagination-border);
+  color: var(--basic-greylight);
 }
 
 .icon-user {
@@ -1617,7 +1634,7 @@
 
 .icon-user:active path,
 .icon-exit:active path {
-  fill: var(--pagination-border);
+  fill: var(--basic-greylight);
 }
 
 .user-menu-list {
@@ -2060,7 +2077,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 5.5px 10px 5.5px;
-  border-color: transparent transparent var(--pagination-border) transparent;
+  border-color: transparent transparent var(--basic-greylight) transparent;
 }
 
 .button-shape:hover {
@@ -2085,7 +2102,7 @@
   height: 0;
   border-style: solid;
   border-width: 10px 5.5px 0 5.5px;
-  border-color: var(--pagination-border) transparent transparent transparent;
+  border-color: var(--basic-greylight) transparent transparent transparent;
   margin-right: 17px;
 }
 
@@ -2208,7 +2225,7 @@
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-black);
-  padding-bottom: 69px;
+  padding-bottom: 67px;
   margin: 0;
 }
 
