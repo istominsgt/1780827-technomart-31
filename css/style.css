@@ -78,6 +78,8 @@
   --shadow-rgba-dark: rgba(0, 0, 0, 0.25);
   --filter-shadow-rgba: rgba(0, 0, 0, 0.15);
   --shadow-rgba-products-item: rgba(0, 0, 0, 0.15);
+  --shop-link-rgba-hover:rgba(197, 197, 197, 0.3);
+  --shop-link-rgba-active:rgba(169, 169, 169, 0.3);
 }
 
 * {
@@ -592,11 +594,12 @@
 }
 
 .shop-link:hover {
-  background-color: var(--shadow-rgba-dark-grey);
+  background-color: var(--shop-link-rgba-hover);
+
 }
 
 .shop-link:active {
-  background-color: var(--shadow-rgba-dark-grey);
+  background-color: var(--shop-link-rgba-active);
 }
 
 .slider-list {
