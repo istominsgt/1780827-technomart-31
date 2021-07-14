@@ -5,14 +5,14 @@
   <title>Интернет-магазин Техномарт</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css"/>
+  <link rel="stylesheet" href="css/style.min.css"/>  
 </head>
 <body class="page-body">
   <header class="main-header">
     <div class="top-navigation">
       <div class="container">
         <div class="top-navigation-wrapper">
-          <a class="logo-wrapper" href="#">
+          <a class="logo-wrapper">
             <img src="img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип" />
           </a>
           <form class="top-navigation-form" action="https://echo.htmlacademy.ru/" method="GET">
@@ -147,21 +147,21 @@
           </li>
           <li class="elements-item slider">
             <div class="slider-wrapper">
-              <div class="slider-controls">
-                <label class="slider-controls-item slider-controls-item-1">
-                  <span class="visually-hidden">Первый</span>
-                </label>
-                <label class="slider-controls-item">
-                  <span class="visually-hidden">Второй</span>
-                </label>
-              </div>
               <div class="slider-controls-buttons">
-                <label class="slider-left">
+                <button class="slider-left" type="button">
                   <span class="visually-hidden">Влево</span>
-                </label>
-                <label class="slider-right">
+                </button>
+                <button class="slider-right" type="button">
                   <span class="visually-hidden">Вправо</span>
-                </label>
+                </button>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-pagination" type="button">
+                  <span class="visually-hidden">Первый</span>
+                </button>
+                <button class="slider-pagination slider-pagination-active" type="button">
+                  <span class="visually-hidden">Второй</span>
+                </button>
               </div>
               <ul class="slider-list">
                 <li class="slider-item-1">
@@ -199,7 +199,8 @@
               </button>
             </p>
             <p class="products-item-img">
-              <img class="item-img" src="img/content/bfg9000.jpg" width="184" height="164" alt="Картинка bosch bfg 9000" />
+              <img class="item-img" src="img/content/bfg9000.jpg" width="184" height="164"
+                alt="Картинка bosch bfg 9000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 9000</h3>
             <p class="old-price">32500 Р.</p>
@@ -213,7 +214,8 @@
               </button>
             </p>
             <p class="products-item-img">
-              <img class="item-img" src="img/content/bfg3000.jpg" width="127" height="112" alt="Картинка bosch bfg 3000" />
+              <img class="item-img" src="img/content/bfg3000.jpg" width="127" height="112"
+                alt="Картинка bosch bfg 3000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 3000</h3>
             <p class="old-price">22500 Р.</p>
@@ -227,7 +229,8 @@
               </button>
             </p>
             <p class="products-item-img">
-              <img class="item-img" src="img/content/bfg6000.jpg" width="144" height="128" alt="Картинка bosch bfg 6000" />
+              <img class="item-img" src="img/content/bfg6000.jpg" width="144" height="128"
+                alt="Картинка bosch bfg 6000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 6000</h3>
             <p class="old-price">30500 Р.</p>
@@ -241,7 +244,8 @@
               </button>
             </p>
             <p class="products-item-img">
-              <img class="item-img" src="img/content/bfg2000.jpg" width="127" height="112" alt="Картинка bosch bfg 2000" />
+              <img class="item-img" src="img/content/bfg2000.jpg" width="127" height="112"
+                alt="Картинка bosch bfg 2000" />
             </p>
             <h3 class="products-item-header">Перфоратор BOSCH BFG 2000</h3>
             <p class="old-price">22500 Р.</p>
@@ -339,7 +343,6 @@
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж.
               </p>
-              <p class="service-img"></p>
             </li>
             <li class="service-item visually-hidden">
               <h3 class="service-list-header">Гарантия</h3>
@@ -350,7 +353,6 @@
                 гарантии. Мы обменяем сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.<br>
               </p>
-              <p class="service-img-guarantee"></p>
             </li>
             <li class="service-item visually-hidden">
               <h3 class="service-list-header">Кредит</h3>
@@ -358,7 +360,6 @@
                 Залезть в долговую яму стало проще! <br>
                 Кредитные консультанты придут вам на помощь.
               </p>
-              <p class="service-img-credits"></p>
               <button class="button button-radius" type="button">Отправить заявку</button>
             </li>
           </ul>
