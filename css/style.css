@@ -92,6 +92,7 @@
 
 .page {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .format {
@@ -1293,6 +1294,11 @@
   margin-bottom: 32px;
 }
 
+.button-map {
+  border: none;
+  padding: 0;
+}
+
 .map {
   border: none;
   margin-bottom: 20px;
@@ -2326,12 +2332,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .modal-map {
+  position: fixed;
+  border-top: 7px solid var(--basic-red);
+  background-color: var(--basic-white);
+  padding-top: 39px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0;
   width: 943px;
   height: 449px;
+  display: none;
 }
 
 .modal-map .button-exit {
@@ -2399,6 +2414,38 @@
   padding: 37px 80px;
   margin: 37px 0 0 0;
   background-color: var(--form-background);
+}
+
+.up-button {
+  position: fixed;
+  z-index: 1;
+  padding: 0;
+  bottom: 75px;
+  right: 20px;
+  width: 64px;
+  height: 64px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border: 5px solid;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+  color: rgb(255, 36, 36);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgb(255, 36, 36);
+  outline-color: #b6aaff;
+}
+
+.up-button:hover {
+  color: #53d95a;
+  background-color: rgba(10, 9, 16, 0.6);
+  border-color: #53d95a;
+}
+
+.shown {
+  display: inline-block;
 }
 
 /* Modal catalog */
